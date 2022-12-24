@@ -56,7 +56,7 @@ const Update = () => {
   };
 
   return (
-    <div className="p-4 flex flex-col justify-center items-center h-screen">
+    <div className="p-4 flex flex-col justify-center items-center h-screen ">
       <form
         onSubmit={updateBook}
         className="flex flex-col justify-center items-center gap-3"
