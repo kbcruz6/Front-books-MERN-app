@@ -8,7 +8,7 @@ const Add = () => {
     title: "",
     author: "",
     description: "",
-    price: null,
+    price: "",
   });
 
   const navigate = useNavigate();
