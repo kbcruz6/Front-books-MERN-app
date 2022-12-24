@@ -18,7 +18,7 @@ const Update = () => {
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const res = await axios.get("http://localhost:3001/books");
+        const res = await axios.get("https://books.up.railway.app/books");
         let result = res.data.find((item) => item.id == bookId);
         setBook(result);
       } catch (err) {
@@ -38,7 +38,7 @@ const Update = () => {
   const updateBook = async (e) => {
     e.preventDefault();
     try {
-      await axios.put("http://localhost:3001/books/" + bookId, book);
+      await axios.put("https://books.up.railway.app/books/" + bookId, book);
       navigate("/");
       console.log("Updateed successfully");
       Swal.fire({

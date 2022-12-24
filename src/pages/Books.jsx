@@ -9,7 +9,7 @@ const Books = () => {
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const res = await axios.get("http://localhost:3001/books");
+        const res = await axios.get("https://books.up.railway.app/books");
         console.log(res);
         setBooks(res.data);
       } catch (err) {
@@ -43,7 +43,7 @@ const Books = () => {
           timerProgressBar: true,
         });
         try {
-          axios.delete("http://localhost:3001/books/" + id);
+          axios.delete("https://books.up.railway.app/books/" + id);
           window.location.reload();
         } catch (err) {
           console.log(err);

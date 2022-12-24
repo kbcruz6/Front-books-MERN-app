@@ -23,7 +23,7 @@ const Add = () => {
   const addBook = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3001/books", book);
+      await axios.post("https://books.up.railway.app/books", book);
       navigate("/");
       console.log("Added successfully");
       Swal.fire({
