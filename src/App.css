@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  background-color: #0d1e3a;
+  color: var(--colorOrangeTwo); 
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root{
+  --colorDarkBlue:#0d1e3a;
+  --colorBlue:#11294e;
+  --colorLightBlue:#132f58;
+  --colorOrangeFive:#ed8936;
+  --colorOrangeFour:#f6ad55;
+  --colorOrangeThree:#fbd38d;
+  --colorOrangeTwo:#feebc8;
+  --colorShadow:#040c16;
+}
