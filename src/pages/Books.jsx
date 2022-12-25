@@ -65,7 +65,7 @@ const Books = () => {
               key={key}
               className="flex flex-col w-[250px] text-center mb-3 justify-between items-center text-lg bg-[var(--colorBlue)] hover:bg-[var(--colorLightBlue)] duration-300 rounded mx-1 p-2 shadow-lg shadow-black"
             >
-              <h2 className="font-bold text-xl pt-3">"{book.title}"</h2>
+              <h2 className="font-bold text-xl pt-3">" {book.title} "</h2>
               <h2 className=" text-sm pt-3">Author: {book.author}</h2>
               <div className="flex flex-col w-full p-3">
                 <span className="text-sm border-b-2 border-orange-500 w-full text-left">
