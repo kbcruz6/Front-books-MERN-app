@@ -63,7 +63,7 @@ const Books = () => {
             // ! <------ CARD ------>
             <div
               key={key}
-              className="flex flex-col w-[250px] text-center mb-3 justify-between items-center text-lg bg-[var(--colorBlue)] hover:bg-[var(--colorLightBlue)] duration-300 rounded mx-1 p-2 shadow-lg shadow-[var(--colorShadow)]"
+              className="flex flex-col w-[250px] text-center mb-3 justify-between items-center text-lg bg-[var(--colorBlue)] hover:bg-[var(--colorLightBlue)] duration-300 rounded mx-1 p-2 shadow-lg shadow-black"
             >
               <h2 className="font-bold text-xl pt-3">"{book.title}"</h2>
               <h2 className=" text-sm pt-3">Author: {book.author}</h2>
@@ -74,6 +74,14 @@ const Books = () => {
                 <p className="text-xs text-justify my-3">{book.description}</p>
                 <span className="border-t-2 border-[var(--colorOrangeFive)]"></span>
               </div>
+              {book.id === 1 && (
+                <a
+                  href="https://portfolio-agustincruz.vercel.app/"
+                  className="text-sm px-2 text-white border-2 border-orange-500 shadow-md shadow-black hover:bg-orange-500 duration-300 "
+                >
+                  Portfolio
+                </a>
+              )}
 
               {/*//! <---- CARD FOOTER ---->  */}
               <div className="my-2 flex flex-col">
@@ -86,7 +94,7 @@ const Books = () => {
                     className={
                       book.id === 1 || book.id === 14
                         ? "hidden"
-                        : "border-2 px-2 my-1 text-sm text-white bg-transparent border-orange-500 hover:bg-orange-500  shadow-md shadow-[var(--colorShadow)] duration-300"
+                        : "border-2 px-2 my-1 text-sm text-white bg-transparent border-orange-500 hover:bg-orange-500  shadow-md shadow-black duration-300"
                     }
                   >
                     <Link to={`/update/${book.id}`}>Update</Link>
@@ -96,7 +104,7 @@ const Books = () => {
                     className={
                       book.id === 1 || book.id === 14
                         ? "hidden"
-                        : "border-2 px-2 my-1 text-sm text-white bg-transparent border-red-500 hover:bg-red-500 shadow-md shadow-[var(--colorShadow)] duration-300"
+                        : "border-2 px-2 my-1 text-sm text-white bg-transparent border-red-500 hover:bg-red-500 shadow-md shadow-black duration-300"
                     }
                   >
                     Delete
@@ -108,7 +116,7 @@ const Books = () => {
           ))}
         </div>
         <div className="flex fixed bottom-0 bg-[var(--colorDarkBlue)] w-full flex-col justify-center items-center">
-          <button className=" border-orange-500 border-2 px-4 my-2 bg-transparent text-white hover:bg-orange-500  text-lg shadow-md shadow-[var(--colorShadow)] duration-300">
+          <button className=" border-orange-500 border-2 px-4 my-2 bg-transparent text-white hover:bg-orange-500  text-lg shadow-md shadow-black duration-300">
             <Link to="/add">Add new book</Link>
           </button>
         </div>
