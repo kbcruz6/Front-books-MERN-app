@@ -123,14 +123,14 @@ const Books = () => {
             //!------------------------->
           ))}
         </div>
-        <div className="flex fixed bottom-0 bg-[var(--colorDarkBlue)] w-full flex-col justify-center items-center">
-          <button
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-delay=""
-            data-aos-offset="0"
-            className=" border-orange-500 border-2 px-4 my-2 bg-transparent text-white hover:bg-orange-500  text-lg shadow-md shadow-black duration-300"
-          >
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-delay=""
+          data-aos-offset="0"
+          className="flex fixed bottom-0 bg-[var(--colorDarkBlue)] w-full flex-col justify-center items-center"
+        >
+          <button className=" border-orange-500 border-2 px-4 my-2 bg-transparent text-white hover:bg-orange-500  text-lg shadow-md shadow-black duration-300">
             <Link to="/add">Add new book</Link>
           </button>
         </div>

@@ -100,14 +100,15 @@ const Add = () => {
           type="number"
           placeholder="Price"
         />
-        <button
+        <div
           data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-delay="600"
-          className="my-2 text-lg bg-transparent text-white px-5 py-1 hover:bg-orange-500 border-orange-500 border-2 duration-300 shadow-lg shadow-black"
         >
-          Add it!
-        </button>
+          <button className="my-2 text-lg bg-transparent text-white px-5 py-1 hover:bg-orange-500 border-orange-500 border-2 duration-300 shadow-lg shadow-black">
+            Add it!
+          </button>
+        </div>
       </form>
     </div>
   );
