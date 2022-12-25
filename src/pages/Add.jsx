@@ -46,10 +46,18 @@ const Add = () => {
         onSubmit={addBook}
         className="flex flex-col justify-center items-center gap-3 "
       >
-        <h1 className="font-bold text-3xl my-3 border-b-2 border-orange-500 shadow-lg shadow-black">
+        <h1
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+          className="font-bold text-3xl my-3 border-b-2 border-orange-500 shadow-lg shadow-black"
+        >
           Add a new book
         </h1>
         <input
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="200"
           required
           name="title"
           onChange={handleChange}
@@ -58,6 +66,9 @@ const Add = () => {
           placeholder="Title"
         />
         <input
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="300"
           required
           name="author"
           onChange={handleChange}
@@ -66,6 +77,9 @@ const Add = () => {
           placeholder="Author"
         />
         <textarea
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="400"
           required
           name="description"
           onChange={handleChange}
@@ -76,6 +90,9 @@ const Add = () => {
         />
 
         <input
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="500"
           required
           name="price"
           onChange={handleChange}
@@ -83,7 +100,12 @@ const Add = () => {
           type="number"
           placeholder="Price"
         />
-        <button className="my-2 text-lg bg-transparent text-white px-5 py-1 hover:bg-orange-500 border-orange-500 border-2 duration-300 shadow-lg shadow-black">
+        <button
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="600"
+          className="my-2 text-lg bg-transparent text-white px-5 py-1 hover:bg-orange-500 border-orange-500 border-2 duration-300 shadow-lg shadow-black"
+        >
           Add it!
         </button>
       </form>

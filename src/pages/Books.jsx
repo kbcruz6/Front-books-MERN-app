@@ -55,13 +55,21 @@ const Books = () => {
   return (
     <div>
       <div className="flex flex-col items-center justify-center mt-2">
-        <h1 className="font-bold text-3xl my-6 mx-3 border-b-4 border-b-orange-500 p-1 text-center">
+        <h1
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-delay=""
+          className="font-bold text-3xl my-6 mx-3 border-b-4 border-b-orange-500 p-1 text-center"
+        >
           Books info
         </h1>
         <div className="flex flex-wrap items-start justify-center mb-12 ">
           {books.map((book, key) => (
             // ! <------ CARD ------>
             <div
+              data-aos="fade-up"
+              data-aos-duration="1300"
+              data-aos-delay="100"
               key={key}
               className="flex flex-col w-[250px] text-center mb-3 justify-between items-center text-lg bg-[var(--colorBlue)] hover:bg-[var(--colorLightBlue)] duration-300 rounded mx-1 p-2 shadow-lg shadow-black"
             >
@@ -116,7 +124,13 @@ const Books = () => {
           ))}
         </div>
         <div className="flex fixed bottom-0 bg-[var(--colorDarkBlue)] w-full flex-col justify-center items-center">
-          <button className=" border-orange-500 border-2 px-4 my-2 bg-transparent text-white hover:bg-orange-500  text-lg shadow-md shadow-black duration-300">
+          <button
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay=""
+            data-aos-offset="0"
+            className=" border-orange-500 border-2 px-4 my-2 bg-transparent text-white hover:bg-orange-500  text-lg shadow-md shadow-black duration-300"
+          >
             <Link to="/add">Add new book</Link>
           </button>
         </div>
