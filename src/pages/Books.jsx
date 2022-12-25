@@ -70,54 +70,58 @@ const Books = () => {
               data-aos="fade-up"
               data-aos-duration="1300"
               data-aos-delay="100"
-              key={key}
-              className="flex flex-col w-[250px] text-center mb-3 justify-between items-center text-lg bg-[var(--colorBlue)] hover:bg-[var(--colorLightBlue)] duration-300 rounded mx-1 p-2 shadow-lg shadow-black"
             >
-              <h2 className="font-bold text-xl pt-3">" {book.title} "</h2>
-              <h2 className=" text-sm pt-3">Author: {book.author}</h2>
-              <div className="flex flex-col w-full p-3">
-                <span className="text-sm border-b-2 border-orange-500 w-full text-left">
-                  Synopsis:
-                </span>
-                <p className="text-xs text-justify my-3">{book.description}</p>
-                <span className="border-t-2 border-orange-500"></span>
-              </div>
-              {book.id === 1 && (
-                <a
-                  href="https://portfolio-agustincruz.vercel.app/"
-                  target="_blank"
-                  className="text-sm px-2 text-white border-2 border-orange-500 shadow-md shadow-black hover:bg-orange-500 duration-300 "
-                >
-                  Portfolio
-                </a>
-              )}
-
-              {/*//! <---- CARD FOOTER ---->  */}
-              <div className="my-2 flex flex-col">
-                <span className="font-bold text-orange-200">
-                  ${book.price.toFixed(2)}
-                </span>
-                {/*//! <---- Buttons ----> */}
-                <div className="flex gap-2">
-                  <button
-                    className={
-                      book.id === 1 || book.id === 14
-                        ? "hidden"
-                        : "border-2 px-2 my-1 text-sm text-white bg-transparent border-orange-500 hover:bg-orange-500  shadow-md shadow-black duration-300"
-                    }
+              <div
+                key={key}
+                className="flex flex-col w-[250px] text-center mb-3 justify-between items-center text-lg bg-[var(--colorBlue)] hover:bg-[var(--colorLightBlue)] duration-300 rounded mx-1 p-2 shadow-lg shadow-black"
+              >
+                <h2 className="font-bold text-xl pt-3">" {book.title} "</h2>
+                <h2 className=" text-sm pt-3">Author: {book.author}</h2>
+                <div className="flex flex-col w-full p-3">
+                  <span className="text-sm border-b-2 border-orange-500 w-full text-left">
+                    Synopsis:
+                  </span>
+                  <p className="text-xs text-justify my-3">
+                    {book.description}
+                  </p>
+                  <span className="border-t-2 border-orange-500"></span>
+                </div>
+                {book.id === 1 && (
+                  <a
+                    href="https://portfolio-agustincruz.vercel.app/"
+                    target="_blank"
+                    className="text-sm px-2 text-white border-2 border-orange-500 shadow-md shadow-black hover:bg-orange-500 duration-300 "
                   >
-                    <Link to={`/update/${book.id}`}>Update</Link>
-                  </button>
-                  <button
-                    onClick={() => handleDelete(book.id)}
-                    className={
-                      book.id === 1 || book.id === 14
-                        ? "hidden"
-                        : "border-2 px-2 my-1 text-sm text-white bg-transparent border-red-500 hover:bg-red-500 shadow-md shadow-black duration-300"
-                    }
-                  >
-                    Delete
-                  </button>
+                    Portfolio
+                  </a>
+                )}
+                {/*//! <---- CARD FOOTER ---->  */}
+                <div className="my-2 flex flex-col">
+                  <span className="font-bold text-orange-200">
+                    ${book.price.toFixed(2)}
+                  </span>
+                  {/*//! <---- Buttons ----> */}
+                  <div className="flex gap-2">
+                    <button
+                      className={
+                        book.id === 1 || book.id === 14
+                          ? "hidden"
+                          : "border-2 px-2 my-1 text-sm text-white bg-transparent border-orange-500 hover:bg-orange-500  shadow-md shadow-black duration-300"
+                      }
+                    >
+                      <Link to={`/update/${book.id}`}>Update</Link>
+                    </button>
+                    <button
+                      onClick={() => handleDelete(book.id)}
+                      className={
+                        book.id === 1 || book.id === 14
+                          ? "hidden"
+                          : "border-2 px-2 my-1 text-sm text-white bg-transparent border-red-500 hover:bg-red-500 shadow-md shadow-black duration-300"
+                      }
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
