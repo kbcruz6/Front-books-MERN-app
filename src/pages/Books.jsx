@@ -85,6 +85,7 @@ const Books = () => {
               {book.id === 1 && (
                 <a
                   href="https://portfolio-agustincruz.vercel.app/"
+                  target="_blank"
                   className="text-sm px-2 text-white border-2 border-orange-500 shadow-md shadow-black hover:bg-orange-500 duration-300 "
                 >
                   Portfolio
