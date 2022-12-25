@@ -55,7 +55,7 @@ const Books = () => {
   return (
     <div>
       <div className="flex flex-col items-center justify-center mt-2">
-        <h1 className="font-bold text-3xl my-6 mx-3 border-b-4 border-b-[var(--colorOrangeFive)] p-1 text-center">
+        <h1 className="font-bold text-3xl my-6 mx-3 border-b-4 border-b-orange-500 p-1 text-center">
           Books info
         </h1>
         <div className="flex flex-wrap items-start justify-center mb-12 ">
@@ -68,11 +68,11 @@ const Books = () => {
               <h2 className="font-bold text-xl pt-3">"{book.title}"</h2>
               <h2 className=" text-sm pt-3">Author: {book.author}</h2>
               <div className="flex flex-col w-full p-3">
-                <span className="text-sm border-b-2 border-[var(--colorOrangeFive)] w-full text-left">
+                <span className="text-sm border-b-2 border-orange-500 w-full text-left">
                   Synopsis:
                 </span>
                 <p className="text-xs text-justify my-3">{book.description}</p>
-                <span className="border-t-2 border-[var(--colorOrangeFive)]"></span>
+                <span className="border-t-2 border-orange-500"></span>
               </div>
               {book.id === 1 && (
                 <a
