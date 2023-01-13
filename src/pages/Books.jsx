@@ -10,7 +10,6 @@ const Books = () => {
     const fetchAllBooks = async () => {
       try {
         const res = await axios.get("https://books.up.railway.app/books");
-        console.log(res);
         setBooks(res.data);
       } catch (err) {
         console.log(err);
