@@ -96,7 +96,7 @@ const Books = () => {
                   </p>
                   <span className="border-t-2 border-orange-500"></span>
                 </div>
-                {book._id === 1 && (
+                {book._id === "63cda3a74a675b5828e8975c" && (
                   <a
                     href="https://portfolio-agustincruz.vercel.app/"
                     target="_blank"
@@ -114,7 +114,8 @@ const Books = () => {
                   <div className="flex gap-2">
                     <button
                       className={
-                        book._id === 1 || book._id === 14
+                        book._id === "63cda3a74a675b5828e8975c" ||
+                        book._id === "63cda4014a675b5828e89770"
                           ? "hidden"
                           : "border-2 px-2 my-1 text-sm text-white bg-transparent border-orange-500 hover:bg-orange-500  shadow-md shadow-black duration-300"
                       }
@@ -124,7 +125,8 @@ const Books = () => {
                     <button
                       onClick={() => handleDelete(book._id)}
                       className={
-                        book._id === 1 || book._id === 14
+                        book._id === "63cda3a74a675b5828e8975c" ||
+                        book._id === "63cda4014a675b5828e89770"
                           ? "hidden"
                           : "border-2 px-2 my-1 text-sm text-white bg-transparent border-red-500 hover:bg-red-500 shadow-md shadow-black duration-300"
                       }
