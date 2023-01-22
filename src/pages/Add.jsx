@@ -23,7 +23,10 @@ const Add = () => {
   const addBook = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://books.up.railway.app/books", book);
+      await axios.post(
+        "https://backend-books-wmongodb.vercel.app/api/books",
+        book
+      );
       navigate("/");
       console.log("Added successfully");
       Swal.fire({

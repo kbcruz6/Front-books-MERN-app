@@ -18,8 +18,10 @@ const Update = () => {
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const res = await axios.get("https://books.up.railway.app/books");
-        let result = res.data.find((item) => item.id == bookId);
+        const res = await axios.get(
+          "https://backend-books-wmongodb.vercel.app/api/books"
+        );
+        let result = res.data.find((item) => item._id == bookId);
         setBook(result);
       } catch (err) {
         console.log(err);
@@ -38,7 +40,10 @@ const Update = () => {
   const updateBook = async (e) => {
     e.preventDefault();
     try {
-      await axios.put("https://books.up.railway.app/books/" + bookId, book);
+      await axios.patch(
+        "https://backend-books-wmongodb.vercel.app/api/books/" + bookId,
+        book
+      );
       navigate("/");
       console.log("Updateed successfully");
       Swal.fire({

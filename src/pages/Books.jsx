@@ -5,18 +5,27 @@ import Swal from "sweetalert2";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
+  const URL = "https://backend-books-wmongodb.vercel.app/api/books";
+  const [bookObj, setBookObj] = useState({});
+  const [auxOne, setAuxOne] = useState(false);
 
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
-        const res = await axios.get("https://books.up.railway.app/books");
+        const res = await axios.get(URL);
         setBooks(res.data);
+        setBookObj({
+          title: "",
+          author: "",
+          description: "",
+          price: null,
+        });
       } catch (err) {
         console.log(err);
       }
     };
     fetchAllBooks();
-  }, []);
+  }, [auxOne]);
 
   const handleDelete = async (id) => {
     await Swal.fire({
@@ -42,7 +51,9 @@ const Books = () => {
           timerProgressBar: true,
         });
         try {
-          axios.delete("https://books.up.railway.app/books/" + id);
+          axios.delete(
+            "https://backend-books-wmongodb.vercel.app/api/books/" + id
+          );
           window.location.reload();
         } catch (err) {
           console.log(err);
@@ -85,7 +96,7 @@ const Books = () => {
                   </p>
                   <span className="border-t-2 border-orange-500"></span>
                 </div>
-                {book.id === 1 && (
+                {book._id === 1 && (
                   <a
                     href="https://portfolio-agustincruz.vercel.app/"
                     target="_blank"
@@ -103,17 +114,17 @@ const Books = () => {
                   <div className="flex gap-2">
                     <button
                       className={
-                        book.id === 1 || book.id === 14
+                        book._id === 1 || book._id === 14
                           ? "hidden"
                           : "border-2 px-2 my-1 text-sm text-white bg-transparent border-orange-500 hover:bg-orange-500  shadow-md shadow-black duration-300"
                       }
                     >
-                      <Link to={`/update/${book.id}`}>Update</Link>
+                      <Link to={`/update/${book._id}`}>Update</Link>
                     </button>
                     <button
-                      onClick={() => handleDelete(book.id)}
+                      onClick={() => handleDelete(book._id)}
                       className={
-                        book.id === 1 || book.id === 14
+                        book._id === 1 || book._id === 14
                           ? "hidden"
                           : "border-2 px-2 my-1 text-sm text-white bg-transparent border-red-500 hover:bg-red-500 shadow-md shadow-black duration-300"
                       }
