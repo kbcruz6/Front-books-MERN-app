@@ -6,26 +6,18 @@ import Swal from "sweetalert2";
 const Books = () => {
   const [books, setBooks] = useState([]);
   const URL = "https://backend-books-wmongodb.vercel.app/api/books";
-  const [bookObj, setBookObj] = useState({});
-  const [auxOne, setAuxOne] = useState(false);
 
   useEffect(() => {
     const fetchAllBooks = async () => {
       try {
         const res = await axios.get(URL);
         setBooks(res.data);
-        setBookObj({
-          title: "",
-          author: "",
-          description: "",
-          price: null,
-        });
       } catch (err) {
         console.log(err);
       }
     };
     fetchAllBooks();
-  }, [auxOne]);
+  }, []);
 
   const handleDelete = async (id) => {
     await Swal.fire({
@@ -91,7 +83,7 @@ const Books = () => {
                   <span className="text-sm border-b-2 border-orange-500 w-full text-left">
                     Synopsis:
                   </span>
-                  <p className="text-xs text-justify my-3">
+                  <p className="text-xs break-words text-justify my-3">
                     {book.description}
                   </p>
                   <span className="border-t-2 border-orange-500"></span>
