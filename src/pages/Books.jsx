@@ -71,7 +71,7 @@ const Books = () => {
           data-aos-delay=""
           className="font-bold text-3xl my-6 mx-3 border-b-4 border-b-orange-500 p-1 text-center"
         >
-          Books info
+          Books Synopsis
         </h1>
         <div className="flex flex-wrap items-start justify-center mb-12 ">
           {books.map((book, key) => (
